@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.bill-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.item-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+.total{
+    border-bottom: 1px solid #ddd;
+    margin: 10px;
+    padding: 5px;
+}
+.note{
+    max-width: 300px;
+    border: 2px dashed #8A312F;
+    margin: 10px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: lighter;
+    color: grey;
+}
+table tr td {
+    padding: 10px;
+}
+table tr td img {
+    border-radius: 5px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.payment-method {
+    margin-top: 20px;
+}
+.payment-method label {
+    margin-left: 10px;
+}
+.complete-order {
+    margin-top: 20px;
+    text-align: right;
+}
+.complete-order a {
+    font-size: 14px;
+    text-decoration: none;
+    text-align: left;
+}
+.btn-danger {
+    /* width: 100%; */
+    padding: 10px;
+    font-size: 14px;
+    background: #8A312F;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-danger:hover {
+    background: #000;
+}

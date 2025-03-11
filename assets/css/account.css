@@ -1,0 +1,64 @@
+.account-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.order-list {
+    flex: 1;
+    min-width: 60%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fff;
+    text-align: center; /* Căn giữa nội dung trong cart-item */
+}
+
+.order-list h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    text-align: center; /* Căn giữa tiêu đề */
+}
+
+.order-list table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left; /* Để nội dung bảng không bị căn giữa */
+}
+
+.order-list td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+table tr td img {
+    border-radius: 5px;
+}
+
+.profile-sidebar {
+    flex: 1;
+    max-width: 15%;
+    height: 200px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.profile-sidebar h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.btn-danger {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background: #8A312F;
+    color: white;
+    border-radius: 5px;
+}
+.btn-danger:hover {
+    background: #000;
+}
