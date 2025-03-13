@@ -268,15 +268,15 @@ $result_pro = $stmt_pro->get_result();
     }
     const wrap = document.getElementById('myWrapper');
 
-    window.addEventListener('scroll', function() {
-    if (window.scrollY === 0) {
-        // Khi cuộn lên đầu trang, hiện thẻ div
-        wrap.style.display = "relative";
-    } else {
-        // Khi cuộn xuống, ẩn thẻ div
-        wrap.style.display = "fixed";
-    }
-    });
+    // window.addEventListener('scroll', function() {
+    // if (window.scrollY === 0) {
+    //     // Khi cuộn lên đầu trang, hiện thẻ div
+    //     wrap.style.display = "relative";
+    // } else {
+    //     // Khi cuộn xuống, ẩn thẻ div
+    //     wrap.style.display = "fixed";
+    // }
+    // });
 
     function scrollToImage(imageIndex) {
     // Lấy ảnh tương ứng trong main-image

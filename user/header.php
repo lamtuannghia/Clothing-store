@@ -150,6 +150,11 @@
             include "user/account.php";
             break;
         }
+        switch($_GET["page_layout"]){
+            case "edit_profile";
+            include "user/edit_profile.php";
+            break;
+        }
     }
     // session_write_close();
     ob_end_flush();

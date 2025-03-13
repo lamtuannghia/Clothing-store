@@ -21,7 +21,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h3><?php echo $_SESSION['admin_name'] ?></h3>
-        <h3><?php echo $_SESSION['admin_role'] ?></h3>
+        <h4><?php echo $_SESSION['admin_role'] ?></h4>
         <ul>
             <li><a href="index.php?page_layout=dashboard">Dashboard</a></li>
             <li><a href="index.php?page_layout=category">Category</a></li>

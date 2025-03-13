@@ -87,7 +87,7 @@
         <p><strong>Họ tên:</strong> <?php echo htmlspecialchars($user_name); ?></p>
         <p><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
         <p><strong>Phone:</strong> <?php echo htmlspecialchars($phone); ?></p>
-        <a href="edit_profile.php" class="btn w-50">Sửa thông tin</a>
+        <a href="index.php?page_layout=edit_profile" class="btn w-50">Sửa thông tin</a>
         <a href="user/logout.php" class="btn btn-danger w-50" onclick="return confirm('Bạn có chắc chắn muốn đăng xuất?');">Đăng xuất</a>
     </div>
 </div>
