@@ -110,63 +110,6 @@
 </div>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
-    // // map api
-    // let map, marker, geocoder;
-
-    // function initMap() {
-    //     let defaultLocation = { lat: 10.7769, lng: 106.7009 }; // Tọa độ mặc định (TPHCM)
-        
-    //     map = new google.maps.Map(document.getElementById("map"), {
-    //         center: defaultLocation,
-    //         zoom: 15,
-    //     });
-
-    //     marker = new google.maps.Marker({
-    //         position: defaultLocation,
-    //         map: map,
-    //         draggable: true, // Cho phép kéo thả
-    //     });
-
-    //     let autocomplete = new google.maps.places.Autocomplete(document.getElementById("address"));
-    //     autocomplete.bindTo("bounds", map);
-
-    //     autocomplete.addListener("place_changed", function () {
-    //         let place = autocomplete.getPlace();
-    //         if (!place.geometry) return;
-    //         updateMarker(place.geometry.location);
-    //     });
-
-    //     marker.addListener("dragend", function () {
-    //         let position = marker.getPosition();
-    //         updateAddress(position);
-    //     });
-    // }
-    // geocoder = new google.maps.Geocoder();
-    // // Cập nhật marker và input
-    // function updateMarker(location) {
-    //     map.setCenter(location);
-    //     marker.setPosition(location);
-    //     updateAddress(location);
-    // }
-
-    // // Lấy địa chỉ từ tọa độ và hiển thị vào input
-    // function updateAddress(location) {
-    //     geocoder.geocode({ location: location }, function (results, status) {
-    //         if (status === "OK" && results[0]) {
-    //             document.getElementById("address").value = results[0].formatted_address;
-    //             document.getElementById("latitude").value = location.lat();
-    //             document.getElementById("longitude").value = location.lng();
-    //         }
-    //     });
-    // }
-
-    // // // Load Google Maps API
-    // // let script = document.createElement("script");
-    // // script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDBPe2dFViWg_J8p5ZNZTk3N3T5Xdw6FOM&libraries=places&callback=initMap`;
-    // // script.async = true;
-    // // script.defer = true;
-    // // document.head.appendChild(script);
-
     // Khởi tạo bản đồ Leaflet
     var map = L.map('map').setView([21.028511, 105.854444], 13); // Hà Nội
 
@@ -215,6 +158,5 @@
             .catch(error => console.error("Lỗi lấy địa chỉ:", error));
     }
 </script>
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBPe2dFViWg_J8p5ZNZTk3N3T5Xdw6FOM&libraries=places&callback=initMap" async defer></script> -->
 </body>
 </html>
