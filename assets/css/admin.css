@@ -64,17 +64,20 @@ body {
 }
 
 .size-list {
+  display: flex;
   list-style: none;
+  gap: 25px;
   padding: 0;
   width: 230px; /* Hoặc điều chỉnh theo nhu cầu */
 }
 
 .size-list li {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 8px;
+  flex: 1;
 }
 
 .size-list input[type="checkbox"] {
@@ -85,6 +88,14 @@ body {
   width: 150px; /* Đảm bảo input số lượng có cùng kích thước */
   text-align: right; /* Căn phải cho đẹp */
 }
+
+.variant {
+  border: 2px dashed gray;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 5px;
+}
+
 .status-success { 
   background-color: #d4edda; 
   color: #155724; 

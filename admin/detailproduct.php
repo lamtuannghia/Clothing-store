@@ -52,6 +52,3 @@ $stt = 1;
         </tbody>
     </table>
 </div>
-
-<script src="assets/bootstrap.bundle.min.js"></script>
-<script src="assets/script.js"></script>

@@ -59,7 +59,6 @@
         exit();
     }
 ?>
-
 <div class="content">
     <h2>Detail product <?php echo $row['name'] ?></h2>
     <form action="" method="POST" enctype="multipart/form-data">

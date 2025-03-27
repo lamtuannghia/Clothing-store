@@ -5,11 +5,13 @@ body {
 .bill-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    max-width: 100%;
+    width: 100vw;
     flex-wrap: wrap;
 }
 .container {
     max-width: 600px;
+    width: 490px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -17,6 +19,7 @@ body {
 }
 .item-container {
     max-width: 700px;
+    height: fit-content;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -45,7 +48,7 @@ table tr td img {
 .form-group {
     margin-bottom: 15px;
 }
-.form-group input, .form-group select {
+.form-group input, .form-group select, .form-group textarea {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
