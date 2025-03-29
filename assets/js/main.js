@@ -34,6 +34,25 @@ document.getElementById("user-input").addEventListener("keydown", function(event
     }
 });
 
+function createMessageElement(message, sender) {
+    let messageDiv = document.createElement("div");
+    messageDiv.classList.add("message", sender);
+
+    let chatText = document.createElement("div");
+    chatText.classList.add("chat-text");
+    chatText.textContent = message;
+
+    if (sender === "chatbot") {
+        let botAvatar = document.createElement("span");
+        botAvatar.classList.add("bot-avatar", "material-symbols-rounded");
+        botAvatar.textContent = "smart_toy";
+        messageDiv.appendChild(botAvatar);
+    }
+
+    messageDiv.appendChild(chatText);
+    return messageDiv;
+}
+
 function sendMessage() {
     let inputField = document.getElementById("user-input");
     let userMessage = inputField.value.trim();
@@ -41,7 +60,8 @@ function sendMessage() {
     if (userMessage === "") return;
 
     let chatMessages = document.getElementById("chat-messages");
-    chatMessages.innerHTML += `<div class="userMessage">${userMessage}</div>`;
+    let userMessageDiv = createMessageElement(userMessage, "userMessage");
+    chatMessages.appendChild(userMessageDiv);
 
     // Gửi dữ liệu đến server
     fetch("user/chatbot.php", {
@@ -51,7 +71,8 @@ function sendMessage() {
     })
     .then(response => response.text())
     .then(data => {
-        chatMessages.innerHTML += `<div class="chatbot">${data}</div>`;
+        let botMessageDiv = createMessageElement(data, "chatbot");
+        chatMessages.appendChild(botMessageDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight; // Cuộn xuống tin nhắn mới
     });
 
