@@ -29,19 +29,6 @@
                 <span class="bot-avatar material-symbols-rounded">smart_toy</span>
                 <div class="chat-text"> Xin chào, tôi có thể giúp được gì cho bạn?</div>
             </div>
-            <div class="message userMessage">
-                <div class="chat-text">Lorem ipsum</div>
-            </div>
-            <div class="message chatbot">
-                <span class="bot-avatar material-symbols-rounded">smart_toy</span>
-                <div class="chat-text">
-                    <div class="thingking-indicator">
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div id="chat-input">
             <input type="text" id="user-input" placeholder="Nhập tin nhắn...">

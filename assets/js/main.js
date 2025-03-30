@@ -60,22 +60,40 @@ function sendMessage() {
     if (userMessage === "") return;
 
     let chatMessages = document.getElementById("chat-messages");
-    let userMessageDiv = createMessageElement(userMessage, "userMessage");
-    chatMessages.appendChild(userMessageDiv);
+    chatMessages.innerHTML += `<div class="message userMessage">
+                                    <div class="chat-text">${userMessage}</div>
+                                </div>`;
 
+    let thinkingDiv = document.createElement("div");
+    thinkingDiv.classList.add("message", "chatbot", "thinking");
+    thinkingDiv.innerHTML = `<span class="bot-avatar material-symbols-rounded">smart_toy</span>
+                                <div class="chat-text">
+                                    <div class="thingking-indicator">
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                        <div class="dot"></div>
+                                    </div>
+                                </div>`;
+
+    chatMessages.appendChild(thinkingDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+    
     // Gửi dữ liệu đến server
-    fetch("user/chatbot.php", {
-        method: "POST",
-        body: new URLSearchParams({ message: userMessage }),
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
-    })
-    .then(response => response.text())
-    .then(data => {
-        let botMessageDiv = createMessageElement(data, "chatbot");
-        chatMessages.appendChild(botMessageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight; // Cuộn xuống tin nhắn mới
-    });
+    setTimeout(() => {
+        fetch("user/chatbot.php", {
+            method: "POST",
+            body: new URLSearchParams({ message: userMessage }),
+            headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        })
+        .then(response => response.text())
+        .then(data => {
+            thinkingDiv.remove();
 
+            let botMessageDiv = createMessageElement(data, "chatbot");
+            chatMessages.appendChild(botMessageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Cuộn xuống tin nhắn mới
+        });
+    },1800);
     inputField.value = ""; // Xóa input sau khi gửi
 }
 
