@@ -20,23 +20,23 @@
             }
         }
 
-    // Kiểm tra nếu người dùng hỏi về giá sản phẩm
-    if (strpos($message, "giá") !== false || strpos($message, "sản phẩm") !== false) {
         $api_url = "http://localhost/ttap2/data/export_product.php"; // Thay đổi thành URL API của bạn
         $products_data = file_get_contents($api_url);
         $products = json_decode($products_data, true);
 
-        if ($products) {
-            $response = "Dưới đây là một số sản phẩm:\n";
-            foreach (array_slice($products, 0, 3) as $product) { // Hiển thị 3 sản phẩm đầu tiên
-                $response .= "- {$product['name']} ({$product['category']}): {$product['price']} VNĐ\n";
-            }
-            $response .= "Bạn muốn biết thêm sản phẩm nào không?";
-        } else {
-            $response = "Xin lỗi, tôi không thể lấy dữ liệu sản phẩm ngay bây giờ.";
-        }
-    }
+        // Kiểm tra xem người dùng có hỏi về một sản phẩm cụ thể không
+        foreach ($products as $product) {
+            // Chuyển tên sản phẩm về chữ thường
+            $product_name = strtolower($product["name"]);
 
-    echo $response;
+            // Kiểm tra nếu tin nhắn của người dùng chứa một phần tên sản phẩm
+            if (strpos($product_name, $message) !== false) {
+                $response = "Sản phẩm: " . $product["name"] . "\n";
+                $response .= "Giá: " . $product["price"] . " VNĐ\n";
+                $response .= "Danh mục: " . $product["category"];
+                break; // Dừng vòng lặp khi tìm thấy sản phẩm
+            }
+        }
+        echo $response;
 }
 ?>

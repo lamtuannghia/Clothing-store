@@ -47,9 +47,6 @@
                     </li>
                     <?php endforeach; ?>
                     <li><a href="index.php?page_layout=product">Quà Tặng</a></li>
-                    <!-- <li><a href="best-seller.html">BEST SELLER</a></li>
-                    <li><a href="hang-moi-ve.html">Hàng Mới Về</a></li>
-                    <li><a href="xu-huong.html">XU HƯỚNG</a></li> -->
                     <li><a href="lien-he.html">LIÊN HỆ</a></li>
                 </ul>
             </nav>

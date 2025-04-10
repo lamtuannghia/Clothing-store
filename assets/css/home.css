@@ -68,74 +68,76 @@ nav ul {
 }
 
 nav ul li {
-    position: relative; 
-  }
-  
-  nav ul li a {
-    display: block;
-    height: max-content;
-    padding-inline: 40px;
-    text-decoration: none; /* Xóa gạch chân */
-    font-family: Arial, sans-serif; /* Phông chữ */
-    font-size: 16px; /* Kích thước chữ */
-    color: #000; /* Màu chữ đen */
-    text-transform: uppercase;
-    line-height: 70px;
-    letter-spacing: 2px;
-  }
-  
-  nav ul li:hover a{
-    color: #8B572A; /* Đổi màu chữ khi di chuột */
-  }
-  
-  /* Menu con */
-  .submenu {
-    display: none; /* Ẩn menu con mặc định */
-    position: absolute;
-    width: 220px;
-    top: 70px;
-    left: 0;
-    padding-left: 70px;
-    background-color: #e0d7c7;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    z-index: 1000;
+  position: relative; 
+}
+
+nav ul li a {
+  display: block;
+  height: max-content;
+  padding-inline: 40px;
+  text-decoration: none; /* Xóa gạch chân */
+  font-family: Arial, sans-serif; /* Phông chữ */
+  font-size: 16px; /* Kích thước chữ */
+  color: #000; /* Màu chữ đen */
+  text-transform: uppercase;
+  line-height: 70px;
+  letter-spacing: 2px;
+}
+
+nav ul li:hover a{
+  color: #8B572A; /* Đổi màu chữ khi di chuột */
+}
+
+/* Menu con */
+.submenu {
+  /* display: none; Ẩn menu con mặc định */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); /* bắt đầu từ vị trí thấp hơn */
+  transition: all 0.3s ease;
+  position: absolute;
+  width: 220px;
+  top: 70px;
+  left: 0;
+  padding-left: 70px;
+  background-color: #e0d7c7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1000;
 }
 
 .submenu a {
-    display: block;
-    padding: 0px 15px;
-    color: white;
-    text-decoration: none;
-    z-index: 1000;
+  display: block;
+  padding: 0px 15px;
+  color: white;
+  text-decoration: none;
+  z-index: 1000;
 }
-
-/* .submenu a:hover {
-    background-color: #555;
-    border-radius: 8px;
-} */
 
 /* Hiển thị menu con khi trỏ chuột */
 nav ul li:hover .submenu {
-    display: block;
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-  .box-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  .image-search, .image-user, .image-cart{
-    max-width: 20px;
-    object-fit: scale-down;
-    padding-left: 12px;
-    padding-right: 15px;
-  }
-  .count-holder {
-    margin-left: -10px;
-  }
+.box-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.image-search, .image-user, .image-cart{
+  max-width: 20px;
+  object-fit: scale-down;
+  padding-left: 12px;
+  padding-right: 15px;
+}
+.count-holder {
+  margin-left: -10px;
+}
 
 /* Định dạng cho các thẻ div dịch vụ */
 .service-section {
