@@ -187,7 +187,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         let variantHTML = `
             <div class="variant">
                 <div class="mb-3">
-                    <label class="form-label">Color</label>
+                    <label class="form-label">${index}Color</label>
                     <input type="text" class="form-control" name="variants[${index}][color]" placeholder="Enter color" required>
                 </div>
                 <div class="mb-3">

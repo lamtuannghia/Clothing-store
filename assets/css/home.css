@@ -101,17 +101,21 @@ nav ul li:hover a{
   left: 0;
   padding-left: 70px;
   background-color: #e0d7c7;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  border-radius: 0px 0px 5px 5px;
   z-index: 1000;
 }
 
 .submenu a {
   display: block;
   padding: 0px 15px;
-  color: white;
+  color: black !important;
   text-decoration: none;
   z-index: 1000;
+}
+
+.submenu a:hover {
+  color: #8B572A !important;
 }
 
 /* Hiển thị menu con khi trỏ chuột */

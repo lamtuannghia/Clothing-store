@@ -46,7 +46,7 @@
                         <?php endif; ?>
                     </li>
                     <?php endforeach; ?>
-                    <li><a href="index.php?page_layout=product">Quà Tặng</a></li>
+                    <li><a href="index.php?page_layout=product">Tất cả</a></li>
                     <li><a href="lien-he.html">LIÊN HỆ</a></li>
                 </ul>
             </nav>

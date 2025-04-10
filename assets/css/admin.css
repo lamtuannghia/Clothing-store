@@ -96,6 +96,10 @@ body {
   margin: 5px;
 }
 
+.variant button {
+  right: 0;
+}
+
 .status-success { 
   background-color: #d4edda; 
   color: #155724; 
