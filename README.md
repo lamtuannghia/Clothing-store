@@ -31,3 +31,26 @@ Dự án đầu tay mô phỏng mô hình thương mại điện tử cho cửa 
 
 ```bash
 git clone https://github.com/lamtuannghia/Clothing-store.git
+
+```
+
+### 2. Setup database:
+
+- Tạo database mới tên: `rhodi_database`
+- Import file `rhodi_database_final.sql` bằng phpMyAdmin
+
+### 3. Mở project với XAMPP:
+- Đặt folder vào htdocs/
+- Truy cập: http://localhost/Clothing-store
+
+### 4. Tài khoản thử nghiệm:
+
+``` 
+👤 Người dùng:
+- Email: nghia@gmail.com
+- Mật khẩu: 123
+
+👑 Admin:
+- Email: admin@gmail.com
+- Mật khẩu: admin
+```
