@@ -26,7 +26,7 @@
 <div class="top-bar" id="myDiv"></div>
     <div class="container" id="myNav">
         <div class="box-logo">
-            <a><img src="assets/image/logo.jpg" class="logo"></a>
+            <a href="index.php?page_layout=main"><img src="assets/image/logo.jpg" class="logo"></a>
         </div>
         <div class="box-nav">
             <nav>
