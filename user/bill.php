@@ -120,8 +120,8 @@
 
     // Thêm marker vào bản đồ
     var marker = L.marker([21.028511, 105.854444], { draggable: true }).addTo(map)
-            .bindPopup("<b>Hà Nội</b><br>Thủ đô Việt Nam.")
-            .openPopup();
+            // .bindPopup("<b>Hà Nội</b><br>Thủ đô Việt Nam.")
+            // .openPopup();
 
     // Sự kiện click để thêm hoặc di chuyển marker
     map.on('click', function(e) {
@@ -131,17 +131,21 @@
         // Nếu đã có marker, di chuyển nó thay vì tạo mới
         if (!marker) {
             marker = L.marker([lat, lng], { draggable: true }).addTo(map);
-
-            // Sự kiện khi kéo thả marker
-            marker.on('dragend', function(event) {
-                var position = marker.getLatLng();
-                getAddress(position.lat, position.lng);
-            });
         } else {
             marker.setLatLng([lat, lng]);
         }
 
         // Lấy địa chỉ từ tọa độ
+        getAddress(lat, lng);
+    });
+
+    // Sự kiện khi kéo thả marker
+    marker.on('dragend', function(event) {
+        var position = marker.getLatLng();
+        // getAddress(position.lat, position.lng);
+        lat = position.lat;
+        lng = position.lng;
+
         getAddress(lat, lng);
     });
 

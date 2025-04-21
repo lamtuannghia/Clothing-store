@@ -15,6 +15,7 @@
             LEFT JOIN cate c ON c.id = ca.cate_id
             WHERE ca.cate_id = ?
             GROUP BY p.id
+            ORDER BY p.id DESC
         ");
         $cate = $conn->prepare("
             SELECT ca.name
@@ -35,6 +36,7 @@
             LEFT JOIN cate c ON c.id = ca.cate_id
             WHERE ca.name = ?
             GROUP BY p.id
+            ORDER BY p.id DESC
         ");
         $cate = $conn->prepare("
             SELECT name
@@ -46,7 +48,9 @@
         $stmt = $conn->prepare("SELECT p.id, p.name, p.price, pi.image, p.quantity 
             FROM product p
             JOIN product_inventory pi ON p.id = pi.product_id
-            GROUP BY p.id");
+            GROUP BY p.id
+            ORDER BY p.id DESC
+            ");
         $cate = $conn->prepare("
         SELECT name
         FROM cate

@@ -27,12 +27,13 @@
         // Kiểm tra xem người dùng có hỏi về một sản phẩm cụ thể không
         foreach ($products as $product) {
             // Chuyển tên sản phẩm về chữ thường
-            $product_name = strtolower($product["name"]);
+            $product_name = strtolower($product["name"]); 
 
             // Kiểm tra nếu tin nhắn của người dùng chứa một phần tên sản phẩm
             if (strpos($product_name, $message) !== false) {
                 $response = "Sản phẩm: " . $product["name"] . "\n";
                 $response .= "Giá: " . $product["price"] . " VNĐ\n";
+                $response .= "Số lượng: " . $product["quantity"] . " VNĐ\n";
                 $response .= "Danh mục: " . $product["category"];
                 break; // Dừng vòng lặp khi tìm thấy sản phẩm
             }

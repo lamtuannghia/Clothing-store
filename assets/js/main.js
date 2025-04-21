@@ -94,7 +94,7 @@ function sendMessage() {
             chatMessages.scrollTop = chatMessages.scrollHeight; // Cuộn xuống tin nhắn mới
         });
     },1800);
-    inputField.value = ""; // Xóa input sau khi gửi
+    inputField.value = ""; // Xóa input sau khi gửi 
 }
 
 

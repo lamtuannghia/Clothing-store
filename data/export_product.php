@@ -1,7 +1,7 @@
 <?php
     include "../config/connect.php";
     // Lấy danh sách sản phẩm
-    $sql = "SELECT p.id, p.name, c.name AS category, p.price 
+    $sql = "SELECT p.id, p.quantity, p.name, c.name AS category, p.price 
     FROM product p 
     JOIN categories c ON p.category_id = c.id";
     $result = $conn->query($sql);
@@ -39,6 +39,7 @@
     $products[] = [
     "id" => $product_id,
     "name" => $row["name"],
+    "quantity" => $row["quantity"],
     "category" => $row["category"],
     "price" => (int) $row["price"],
     "variants" => $variants
