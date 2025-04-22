@@ -53,7 +53,7 @@
             <?php while ($order = $orders->fetch_assoc()) : ?>
             <tr>
                 <td>#<?php echo $order['bill_id']; ?></td>
-                <td>
+                <td style="max-width: 180px">
                     <?php echo $order['user_name'];?><br>
                     <?php echo $order['email'];?><br>
                     <?php echo $order['phone'];?><br>

@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
               FROM product p
               JOIN product_inventory pi ON p.id = pi.product_id
               LEFT JOIN size s ON pi.id = s.inven_id
-              WHERE s.quantity > 0 AND p.id = ?
+              WHERE s.quantity >= 0 AND p.id = ?
               GROUP BY pi.id";
         
     $stmt = $conn->prepare($query);

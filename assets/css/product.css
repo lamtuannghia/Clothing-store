@@ -35,6 +35,7 @@
     flex-direction: column; /* Sắp xếp theo chiều dọc */
     align-items: center; /* Căn giữa chữ */
     cursor: pointer;
+    position: relative;
   }
   .product-item h4 {
     text-transform: uppercase;
@@ -250,14 +251,15 @@ h2 {
     color: black;
 }
 .out-of-stock {
-  position: relative;
-  top: 25px;
-  left: 85px; 
+  position: absolute;
+  top: 5px;
+  left: 35px; 
   background: white;
   color: black;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
+  font-weight: bold;
 }
 .sidebar ul {
   display: grid;
